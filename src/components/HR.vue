@@ -1,0 +1,29 @@
+<template>
+    <div class="hr">
+        <h2>HR Team</h2>
+        <div v-for="(item,index) in HR" v-bind:key="index">
+            <p v-if="item.department == 'HR'">
+                Name: {{item.name}} 
+                Age: {{item.age}} 
+                <button v-on:click="deleteHR(item.name)">Delete</button>
+            </p>
+        </div>
+    </div>
+</template>
+
+<script>
+export default {
+    name:'HR',
+    props:['HR'],
+    methods:{
+        
+        deleteHR(name){
+            this.$emit('delete',{name})
+        }
+    }
+}
+</script>
+
+<style lang="stylus">
+
+</style>
