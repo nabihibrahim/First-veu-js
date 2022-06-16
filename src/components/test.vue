@@ -13,7 +13,13 @@ export default {
             Message : 'Hello Guys from test component',
             Message2 : 'أهلا بكم يا أصدقاء'
         }
-    }
+    },
+    created(){
+        alert('Created')
+    },
+    beforeCreate() {
+        alert('beforeCreate')
+    },
 }
 </script>
 
