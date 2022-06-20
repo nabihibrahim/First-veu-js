@@ -21,9 +21,9 @@ export default {
             posts:[]
         }
     },
-    created(){
+  async created(){
         // alert('Created')
-        axios.get('https://jsonplaceholder.typicode.com/posts')
+      await  axios.get('https://jsonplaceholder.typicode.com/posts')
         .then(res=>{
             this.posts = res.data
         }).catch(e=>{
